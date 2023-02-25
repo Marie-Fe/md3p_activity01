@@ -16,4 +16,22 @@ fun main(args: Array<String>){
 
 }
 
+/*fun main (array: String): Boolean {
+    println("Enter a word: ")
+    val word: String? = readLine()
+
+    var a = 0
+    var b = word!!.length - 1
+
+    while (a < b) {
+        if (word.chars() != word.chars())
+            return false
+
+        a++
+        b--
+    }
+    return true
+}*/
+
+
 
