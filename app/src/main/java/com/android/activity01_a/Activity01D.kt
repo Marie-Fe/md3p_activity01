@@ -6,7 +6,6 @@ import androidx.lifecycle.viewmodel.CreationExtras
 fun main() {
     println("Input 5 monetary amount:")
 
-    do {
 
         print("Input first number:")
         val a = readLine()!!.toDouble()
@@ -26,8 +25,16 @@ fun main() {
         val result = a + b + c + d + e
         val divide = result / f
         println("Result: $divide")
-    } while (!(a == null && b == null && c == null && d == null && e == null))
+
 
 }
+
+
+
+
+
+
+
+
 
 
