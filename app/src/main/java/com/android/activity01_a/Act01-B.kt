@@ -2,10 +2,10 @@ package com.android.activity01_a
 
 fun main() {
 
-    var library = listOf("Education", "Textbook", "Novels")
-    var education =listOf("1.1.Philippines Educational System","1.2.Democracy and Education","1.3.Educated")
-    var textbook = listOf("2.1.Practical English Usage ","2.2.College Physics","2.3.Calculus")
-    var novel = listOf("3.1.The Adventure of Sherlock Holmes","3.2.The A.B.C Murder","3.3.The Study in Scarlet")
+    val library = listOf("Education", "Textbook", "Novels")
+    val education =listOf("1.1.Philippines Educational System","1.2.Democracy and Education","1.3.Educated")
+    val textbook = listOf("2.1.Practical English Usage ","2.2.College Physics","2.3.Calculus")
+    val novel = listOf("3.1.The Adventure of Sherlock Holmes","3.2.The A.B.C Murder","3.3.The Study in Scarlet")
 
     println("Type/genre of book in the library:")
     for (x in library) {
@@ -13,17 +13,17 @@ fun main() {
     }
 
     println("In the list, what type or genre of book would you like to borrow?")
-    var type = readLine()
+    val type = readLine()
 
-    var result = type
+    val result = type?.lowercase()
 
-    if (type == "education"  ) {
+    if (result == "education".lowercase() ) {
         println("Here is the list of book under Education:")
         for (y in education) {
             println(y)
         }
         println("What book would you like to borrow? Type the no. of the book")
-        var book = readLine()!!.toDouble()
+        val book = readLine()!!.toDouble()
         if (book == 1.1) {
 
             println(
@@ -46,13 +46,13 @@ fun main() {
         }else {
             println("Its not in the list.")
         }
-    }else if (type == "textbook") {
+    }else if (result == "textbook".lowercase()) {
         println("Here is the list of book under Textbook:")
         for (z in textbook) {
             println(z)
         }
         println("What book would you like to borrow? Type the no. of the book")
-        var book1 = readLine()!!.toDouble()
+        val book1 = readLine()!!.toDouble()
         if (book1 == 2.1) {
             println("Practical English Usage:" +
                     "Available copy:20 "+
@@ -72,13 +72,13 @@ fun main() {
         }else {
             println("Its not in the list")
         }
-    }else if (type == "novel") {
+    }else if (result == "novel".lowercase()) {
         println("Here is the list of book under Novel:")
         for (a in novel) {
             println(a)
         }
         println("What book would you like to borrow? Type the no. of the book")
-        var book2 = readLine()!!.toDouble()
+        val book2 = readLine()!!.toDouble()
         if (book2 == 3.1) {
             println("The Adventure of Sherlock Holmes:" +
                     "Available copy:1 (digitalized) "+
