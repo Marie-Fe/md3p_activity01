@@ -1,5 +1,7 @@
 package com.android.activity01_a
 
+import java.util.Locale
+
 // First try
 /*fun main(args: Array<String>){
     print("Enter a word:")
@@ -16,34 +18,25 @@ package com.android.activity01_a
 }*/
 
 fun main() {
-    print("Enter a word to know if its a Palindrome or not")
-    println("Enter word: ")
-    val word = readLine()
+    print("Enter a string: ")
+    val input: String? = readLine()?.uppercase()
 
-    //call function
-    if (palindromcheck(word)) {
-        println("$word is a palindrome")
-    }else {
-        println("$word is not a palindrome")
+    if (input != null && isPalindrome(input)) {
+        println("$input is a palindrome!")
+    } else {
+        println("$input is not a palindrome.")
     }
-
 }
 
-fun palindromcheck(input: String?): Boolean {
-    // check input length of both ends to the middle
-
-     var a = 0
-    var b = input!!.length-1
-
-    while (a < b) {
-        if (input[a] != input[b]) {
+fun isPalindrome(str: String): Boolean {
+    val len = str.length
+    for (i in 0 until len / 2) {
+        if (str[i] != str[len - i - 1]) {
             return false
         }
-        //to continue loop
-        a++
-        b--
     }
     return true
 }
+
 
 
