@@ -1,39 +1,67 @@
 package com.android.activity01_a
 //Set and Map
 fun main() {
-    // Map
-    val countries = mapOf("Japan" to 1, "Korea" to 2, "Philippines" to 3, "China" to 4, "Canada" to 5)
+    /*
+    // Use Case ArrayList: Storing a playlist of songs
+    val playlist = ArrayList<String>()
+    playlist.add("Calm Down")
+    playlist.add("Flower")
+    playlist.add("Georgia")
+    playlist.add("All to Well")
 
-    // Know the value of a key
-    val key = "Philippines"
-    val value = countries[key]
-    if (value != null) {
-        println("The value of $key is $value")
-    } else {
-        println("$key is not in the map")
+    println("Song playlist: $playlist")
+    println("Add another song to the playlist: ")
+    val addsong: String = readLine()!!.toString()
+    playlist.add(addsong)
+}
+*/
+
+/*
+// Use Case Map: Count occurrences
+val names = listOf("Maria", "Alex", "John, "Alex", "Marie", "Apple")
+
+val counts = mutableMapOf<String, Int>()
+    for (name in names) {
+        counts[name] = counts.getOrDefault(name, 0) + 1
     }
 
-    println("List of countries: ")
-    for (country in countries) {
-        println(country)
-    }
-
-    // Set
-    val flower = setOf("Rose", "Santana", "Orchid", "Daisy", "Jasmin", "Tulip")
-
-    // Check if its in the set
-    val input = "Marigold"
-    if (flower.contains(input)) {
-        println("$input is in the set")
-    } else {
-        println("$input is not in the set")
-    }
-
-    println("List of Flowers: ")
-    for (flowers in flower) {
-        println(flowers)
+    // Printing the counts
+    for ((name, count) in counts) {
+        println("$name: $count")
     }
 }
+*/
+
+
+// Example of a dictionary using a Map
+    val dictionary = mapOf(
+        "mad" to "very angry",
+        "ethereal" to "extremely delicate and light in a way that seems not to be at this world",
+        "vad" to "wild, untamed, uncontrolled, unregulated ",
+        "leal" to "faithful and true",
+        "meas" to "a sense of respect"
+    )
+
+    for (word in dictionary) {
+        print(word)
+    }
+
+
+// Accessing a definition
+    println("Definition of the Word: ")
+    val def = readLine()
+
+    println(dictionary["$def"])
+}
+
+/*
+// Example of checking for membership using a Set
+    val setOfNumbers = setOf(1, 2, 3, 4, 5)
+
+    println(setOfNumbers.contains(3)) // Output: true
+    println(setOfNumbers.contains(6)) // Output: false
+}
+*/
 
 //print element, finding the sum and largest number using array
 /*fun main() {
@@ -90,6 +118,4 @@ fun main() {
     print(subjects)
 
 
-}
-*/
-
+}*/
