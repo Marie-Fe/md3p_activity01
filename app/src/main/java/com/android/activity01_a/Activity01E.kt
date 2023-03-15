@@ -33,7 +33,7 @@ val counts = mutableMapOf<String, Int>()
 */
 
 
-// Example of a dictionary using a Map
+// Use case Map: dictionary
     val dictionary = mapOf(
         "mad" to "very angry",
         "ethereal" to "extremely delicate and light in a way that seems not to be at this world",
@@ -46,20 +46,17 @@ val counts = mutableMapOf<String, Int>()
         print(word)
     }
 
-
-// Accessing a definition
+    //know the definition
     println("Definition of the Word: ")
-    val def = readLine()
-
-    println(dictionary["$def"])
+    println(dictionary["vad"])
 }
 
 /*
-// Example of checking for membership using a Set
-    val setOfNumbers = setOf(1, 2, 3, 4, 5)
+// Use case Set: Checking elements
+    val courses = setOf("BS Computer Science", "BS Information Technology", "BS Political Science","BS Business Administration")
 
-    println(setOfNumbers.contains(3)) // Output: true
-    println(setOfNumbers.contains(6)) // Output: false
+    println(courses.contains(BS Information System)) // Output: false
+    println(courses.contains(BS Marine Biology)) // Output: false
 }
 */
 
