@@ -14,17 +14,17 @@ fun main() {
         Student("Lester", "Hamoy", "Les", 17890, 2020),
     )
 
+
     println("Search student: ")
     val search = readLine()
 
-    val matchingStudent = searchStudentWildSearch(students, "$search")
-    println(matchingStudent)
-    val matchingStudents = searchStudentWildSearch(students, "$search", "lastname")
+    val matchingStudents = searchStudentWildSearch(students, search.toString())
     println(matchingStudents)
+
 }
 
 fun searchStudentWildSearch(students: List<Student>, searchStr: String): ArrayList<Student> {
-    val matchingStudent = ArrayList<Student>()
+    val matchingStudents = ArrayList<Student>()
     for (student in students) {
         if (student.firstName.contains(
                 searchStr,
@@ -34,10 +34,10 @@ fun searchStudentWildSearch(students: List<Student>, searchStr: String): ArrayLi
                 ignoreCase = true
             ) || student.lastName.contains(searchStr, ignoreCase = true)
         ) {
-            matchingStudent.add(student)
+            matchingStudents.add(student)
         }
     }
-    return matchingStudent
+    return matchingStudents
 }
 
 fun searchStudentWildSearch(students: List<Student>, searchStr: String, searchBy: String): ArrayList<Student> {
