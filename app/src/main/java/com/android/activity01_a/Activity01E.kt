@@ -1,118 +1,64 @@
 package com.android.activity01_a
 //Set and Map
 fun main() {
-    /*
+
     // Use Case ArrayList: Storing a playlist of songs
+
+
     val playlist = ArrayList<String>()
-    playlist.add("Calm Down")
-    playlist.add("Flower")
-    playlist.add("Georgia")
-    playlist.add("All to Well")
-
-    println("Song playlist: $playlist")
-    println("Add another song to the playlist: ")
-    val addsong: String = readLine()!!.toString()
-    playlist.add(addsong)
-}
-*/
-
-/*
-// Use Case Map: Count occurrences
-val names = listOf("Maria", "Alex", "John, "Alex", "Marie", "Apple")
-
-val counts = mutableMapOf<String, Int>()
-    for (name in names) {
-        counts[name] = counts.getOrDefault(name, 0) + 1
-    }
-
-    // Printing the counts
-    for ((name, count) in counts) {
-        println("$name: $count")
-    }
-}
-*/
+    playlist.add("Flowers")
+    playlist.add("Evangeline")
+    playlist.add("All too well")
+    playlist.add("Alone")
+    playlist.add("Lemon")
+    playlist.add("Orange")
+    playlist.add("We are")
+    playlist.add("Shock!")
 
 
-// Use case Map: dictionary
-    val dictionary = mapOf(
-        "mad" to "very angry",
-        "ethereal" to "extremely delicate and light in a way that seems not to be at this world",
-        "vad" to "wild, untamed, uncontrolled, unregulated ",
-        "leal" to "faithful and true",
-        "meas" to "a sense of respect"
-    )
+    println("Would you like to see your playlist? Y/N")
+    val ans = readLine()
 
-    for (word in dictionary) {
-        print(word)
-    }
+    if (ans == "Y" || ans == "y") {
+        println("$playlist")
 
-    //know the definition
-    println("Definition of the Word: ")
-    println(dictionary["vad"])
-}
+        println("Would you like to add some songs or remove some songs to your playlist: Add/Remove")
+        val ans1 = readLine()
+        if (ans1 == "Add" || ans1 == "add") {
+            while (true) {
+                println("Enter the name of a song to add to the playlist (or enter 'quit' to exit):")
+                val song = readLine()
 
-/*
-// Use case Set: Checking elements
-    val courses = setOf("BS Computer Science", "BS Information Technology", "BS Political Science","BS Business Administration")
+                if (song == "quit") {
+                    break
+                }
 
-    println(courses.contains(BS Information System)) // Output: false
-    println(courses.contains(BS Marine Biology)) // Output: false
-}
-*/
+                playlist.add(song!!)
+                println("'$song' has been added to the playlist.")
+            }
 
-//print element, finding the sum and largest number using array
-/*fun main() {
-    val numbers = arrayOf(100, 80, 300, 50, 25)
+            println("Your playlist contains ${playlist.size} songs:")
+            playlist.forEach { println("- $it") }
+        } else if (ans1 == "Remove" || ans1 == "remove") {
+            while (true) {
+                println("Enter a song you would like to remove (or enter 'quit' to exist):")
+                val song1 = readLine()
 
-    // Print all numbers in the array
-    println("All numbers in the array: ")
-    for (number in numbers) {
-        println(number)
-    }
+                if (song1 == "quit") {
+                    break
+                }
 
-    // Find the sum of all numbers in the array
-    var sum = 0
-    for (number in numbers) {
-        sum += number
-    }
-    println("The sum of all numbers in the array is $sum")
+                playlist.remove(song1!!)
+                println("'$song1' has been remove")
+            }
+            println("Your playlist now contains ${playlist.size} songs: ")
+            playlist.forEach { println("- $it") }
 
-
-    // Find the largest number in the array
-    var largest = numbers[0]
-    for (i in 1 until numbers.size) {
-        if (numbers[i] > largest) {
-            largest = numbers[i]
         }
+
+
+    } else {
+        println("Okay")
     }
-    println("The largest number in the array is $largest")
+
 }
-
- */
-//use cases in arrayList
-/*
-fun main() {
-    val subjects = arrayListOf<String>()
-
-    subjects.add("Ethics")
-    subjects.add("Science")
-    subjects.add("Math in Modern World")
-    subjects.add("Filipino")
-
-    for (subject in subjects) {
-        println("List of subjects in school:")
-        print(subject)
-    }
-
-    //remove elements from the list
-    subjects.remove("Ethics")
-    println("Subjects list:")
-    print(subjects)
-
-    //sort the order in the elements by its length
-    subjects.sortBy { it.length }
-    println("List of subjects: ")
-    print(subjects)
-
-
-}*/
