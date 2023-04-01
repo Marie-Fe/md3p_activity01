@@ -1,3 +1,4 @@
+
 package com.android.activity01_a
 import java.util.*
 
@@ -45,8 +46,6 @@ class Salad(name: String) : Item(name)
 
 // Define OrderStatus enumeration
 enum class OrderStatus {
-    SENT_TO_KITCHEN,
-    BEING_PREPARED,
     PENDING,
     PAID
 }
@@ -57,10 +56,37 @@ fun updateOrder(cart: Cart, status: OrderStatus): Cart {
     cart.status = status
     return cart
 }
-
 fun showOrderStatus(cart: Cart) {
     println("Order status: ${cart.status}")
 }
+
+fun checkCart(cart: Cart, customer: Customer, status: OrderStatus, item: Item) {
+    // Check for empty cart
+    if (cart.items.isEmpty()) {
+        throw CheckoutException("Cart is empty.")
+    }
+    // Check for not on the cart
+    if (!cart.items.equals(cart.addItem(item))) {
+        throw CheckoutException("Not on the added list in the cart.")
+    }
+    //Check for invalid number
+    if (customer.mobileNumber == String()) {
+        throw CheckoutException("Invalid phone number.")
+    }
+    // Check for list
+    if (!cart.addItem(item).equals(item)) {
+        throw CheckoutException("Item ${item.name} is not in the list of items for sell.")
+    }
+    // Check for payment failure
+    if (status != OrderStatus.PAID) {
+        throw CheckoutException("Payment failed or still pending.")
+    }
+}
+
+
+
+class CheckoutException(s: String) : Throwable() {}
+
 
 // Main function to test program
 fun main() {
@@ -129,10 +155,13 @@ fun main() {
     val address = readLine()
     val costumer1 = Customer("$fn", "$ln", "$mn", "$address")
 
+
     // Create carts for customers
     val cart = Cart(UUID.randomUUID(), costumer1)
     // Print carts
+    println(costumer1)
     println(cart)
+    checkCart(cart,costumer1,OrderStatus.PENDING, item = Item(cart.items.toString()))
 
     while (true) {
         println("What would you like to do?")
@@ -151,25 +180,8 @@ fun main() {
                 val item = Item(itemName)
                 cart.addItem(item)
                 println("$itemName added to cart.")
-                when (item) {
-                    fruits -> {
-                        //Update order status
-                        updateOrder(cart, OrderStatus.PENDING)
-                    }
-                    juices -> {
-                        updateOrder(cart, OrderStatus.BEING_PREPARED)
-                    }
-                    shakes -> {
-                        updateOrder(cart, OrderStatus.BEING_PREPARED)
-                    }
-                    salads -> {
-                        updateOrder(cart, OrderStatus.SENT_TO_KITCHEN)
-                    }
-                    sandwiches -> {
-                        updateOrder(cart, OrderStatus.SENT_TO_KITCHEN)
-                    }
-                }
                 showOrderStatus(cart)
+                checkCart(cart,costumer1,OrderStatus.PENDING, item = Item(cart.items.toString()))
             }
             2 -> {
                 println("What would you like to remove?")
@@ -181,6 +193,7 @@ fun main() {
                 } else {
                     println("$itemName not found in cart.")
                 }
+                checkCart(cart,costumer1,OrderStatus.PENDING, item = Item(cart.items.toString()))
             }
             3 -> {
                 println("Items in the cart:")
@@ -196,14 +209,18 @@ fun main() {
                     updateOrder(cart, OrderStatus.PAID)
                     showOrderStatus(cart)
                 }
+                else if (pay =="N" || pay =="n") {
+                    updateOrder(cart, OrderStatus.PENDING)
+                }
             }
             5 -> {
                 println("Goodbye.")
                 return
             }
-            else -> println("Invalid choice.")
+            else -> {
+                println("Invalid choice.")
+            }
         }
+        checkCart(cart,costumer1,OrderStatus.PENDING, item = Item(cart.items.toString()))
     }
-
 }
-
