@@ -151,24 +151,6 @@ fun main() {
                 val item = Item(itemName)
                 cart.addItem(item)
                 println("$itemName added to cart.")
-                when (item) {
-                    fruits -> {
-                        //Update order status
-                        updateOrder(cart, OrderStatus.PENDING)
-                    }
-                    juices -> {
-                        updateOrder(cart, OrderStatus.BEING_PREPARED)
-                    }
-                    shakes -> {
-                        updateOrder(cart, OrderStatus.BEING_PREPARED)
-                    }
-                    salads -> {
-                        updateOrder(cart, OrderStatus.SENT_TO_KITCHEN)
-                    }
-                    sandwiches -> {
-                        updateOrder(cart, OrderStatus.SENT_TO_KITCHEN)
-                    }
-                }
                 showOrderStatus(cart)
             }
             2 -> {
