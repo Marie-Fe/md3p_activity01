@@ -10,13 +10,13 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="application_for_employment">Application For Employment</string>
-    <string name="position_you_are_applying_for">Position You Are Applying For</string>
-    <string name="desired_salary">Desired Salary</string>
+    <string name="position_you_are_applying_for">Position You Are Applying For:</string>
+    <string name="desired_salary">Desired Salary:</string>
     <string name="application_for_employment1">Application For Employment</string>
     <string name="position_you_are_applying_for1">Position you are applying for</string>
     <string name="desired_salary1">Desired Salary</string>
-    <string name="hint1">hint</string>
-    <string name="date_available_for_work">Date available for work</string>
+    <string name="hint1">  </string>
+    <string name="date_available_for_work">Date available for work:</string>
     <string name="date_available_for_work1">Date available for work:</string>
     <string name="desired_salary2">Desired Salary:</string>
     <string name="personal_information">PERSONAL INFORMATION</string>
@@ -30,9 +30,9 @@
     <string name="city">City</string>
     <string name="state">State</string>
     <string name="zip">ZIP</string>
-    <string name="home_phone">Home Phone</string>
-    <string name="cell_phone">Cell Phone</string>
-    <string name="email_address">Email Address</string>
+    <string name="home_phone">Home Phone:</string>
+    <string name="cell_phone">Cell Phone:</string>
+    <string name="email_address">Email Address:</string>
     <string name="social_security_number">Social Security Number:</string>
     <string name="are_you_a_u_s_citizen">Are you a U.S. Citizen?</string>
     <string name="yes">Yes</string>
@@ -49,19 +49,19 @@
     <string name="other_training_certificates_or_licences_held">Other training certificates or licences held:</string>
     <string name="employment">EMPLOYMENT</string>
     <string name="employer">Employer:</string>
-    <string name="address2">Address</string>
+    <string name="address2">Address:</string>
     <string name="mons">$</string>
     <string name="date_employed">Date Employed:</string>
     <string name="work_phone">Work Phone:</string>
     <string name="pay_rate">Pay Rate:</string>
     <string name="monse">$</string>
     <string name="to">to</string>
-    <string name="city2">City</string>
-    <string name="state1">State</string>
-    <string name="zip1">ZIP</string>
-    <string name="position">Position</string>
-    <string name="duties_performed">Duties Performed</string>
-    <string name="supervisor_s_name_and_position">Supervisor\'s Name and Position:</string>
+    <string name="city2">City:</string>
+    <string name="state1">State:</string>
+    <string name="zip1">ZIP:</string>
+    <string name="position">Position:</string>
+    <string name="duties_performed">Duties Performed:</string>
+    <string name="supervisor_s_name_and_position">Supervisor\'s Name and Title:</string>
     <string name="reasons_for_leaving">Reasons for Leaving:</string>
     <string name="may_we_contact_them">May we contact them?</string>
     <string name="references">REFERENCES</string>
@@ -76,4 +76,48 @@
     <string name="hint">hint</string>
     <string name="signature_of_applicant">Signature of Applicant</string>
     <string name="date">Date</string>
+    <string name="slambook">Slambook</string>
+    <string name="slam_book_for_thy_self">Slam Book for thy self!</string>
+    <string name="full_name">Full Name:</string>
+    <string name="middle_name">Middle name</string>
+    <string name="nickname">Nickname:</string>
+    <string name="age">Age:</string>
+    <string name="gender">Gender:</string>
+    <string name="birthday">Birthday:</string>
+    <string name="zordiac_sign">Zordiac Sign:</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="other">Other:</string>
+    <string name="space" />
+    <string name="hobbies">Hobbies:</string>
+    <string name="add">Add</string>
+    <string name="list_of_your_hobbies">List of your hobbies:</string>
+    <string name="favorite_songs">Favorite songs:</string>
+    <string name="favorite_movies_animes_series_or_tv_shows">Favorite movies, animes, series or TV shows:</string>
+    <string name="favorite_books_mangas_comics_poem_or_articles">Favorite books, mangas, comics, poem, or articles:</string>
+    <string name="favorite_quote_or_saying">Favorite quote or saying:</string>
+    <string name="describe_your_self_in_just_3_words">Describe Your Self in just 3 Words:</string>
+    <string name="if_your_know_your_has_a_crush_on_you_what_would_be_your_reaction">If your know your has a crush on you, what would be your reaction?</string>
+    <string name="would_you_rather_be_smart_pretty_handsome_or_wealthy">Would you rather be smart, pretty/handsome or wealthy?</string>
+    <string name="what_is_the_silliest_thing_you_have_ever_done">What is the silliest thing you have ever done?</string>
+    <string name="favorite_animal">Favorite animal:</string>
+    <string name="what_is_the_most_adventurous_thing_you_have_ever_done">What is the most adventurous thing you have ever done?</string>
+
+    <string name="selected_item">Select:</string>
+    <string name="submit">SUBMIT</string>
+    <string name="$">$</string>
+    <string-array name="Zordiac">
+    <item>Aries (Mar 21 - Apr 19)</item>
+    <item>Taurus (Apr 20 - May 20)</item>
+    <item>Gemini (May 21 - Jun 20</item>
+    <item>Cancer (Jun 21 - Jul 22)</item>
+    <item>Leo (Jul 23 - Aug 22)</item>
+    <item>Virgo (Aug 23 - Sep 22)</item>
+    <item>Libra (Sep 23 - Oct 22)</item>
+    <item>Scorpio (Oct 23 - Nov 21)</item>
+    <item>Sagittarius (Nov 22 - Dec 21)</item>
+    <item>Capricorn (Dec 22 - Jan 19)</item>
+    <item>Aquarius (Jan 20 - Feb 18)</item>
+    <item>Pisces (Feb 19 - Mar 20)</item>
+</string-array>
 </resources>
